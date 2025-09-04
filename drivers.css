@@ -1,0 +1,288 @@
+/* Drivers Page Specific Styles */
+
+.drivers-page .nav-link.active {
+    color: #0057FF;
+    font-weight: 600;
+}
+
+/* Drivers Hero */
+.drivers-hero {
+    background: linear-gradient(135deg, #FFDA1F 0%, #ffd000 100%);
+    color: #0A0A0A;
+    padding: 150px 0 100px;
+}
+
+.drivers-hero .hero-title {
+    color: #0A0A0A;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.drivers-hero .hero-subtitle {
+    color: #333;
+    opacity: 1;
+}
+
+/* Signup Form */
+.signup-form {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #0057FF;
+    font-size: 2.2rem;
+}
+
+.form-container > p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.driver-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #0057FF;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    margin: 0;
+    width: auto;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Packages Section */
+.packages {
+    padding: 100px 0;
+    background: white;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.package-item {
+    background: white;
+    border: 2px solid #e1e5e9;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.package-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.package-item.featured {
+    border-color: #0057FF;
+    transform: scale(1.05);
+}
+
+.package-item.featured .package-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0057FF;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.package-item.premium {
+    background: linear-gradient(135deg, #FFDA1F 0%, #ffd000 100%);
+}
+
+.package-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0A0A0A;
+}
+
+.package-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0057FF;
+    margin-bottom: 30px;
+}
+
+.package-item.premium .package-price {
+    color: #0A0A0A;
+}
+
+.package-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e5e9;
+    color: #666;
+}
+
+.package-features li:last-child {
+    border-bottom: none;
+}
+
+/* Why Drive With Us */
+.why-drive {
+    padding: 100px 0;
+    background: #0A0A0A;
+    color: white;
+}
+
+.why-drive .section-title {
+    color: white;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    color: #FFDA1F;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0057FF 0%, #4285f4 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .drivers-hero .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .form-container {
+        padding: 40px 30px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-item.featured {
+        transform: none;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .drivers-hero .hero-title {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}

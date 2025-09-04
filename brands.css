@@ -1,0 +1,355 @@
+/* Brands Page Specific Styles */
+
+.brands-page .nav-link.active {
+    color: #0057FF;
+    font-weight: 600;
+}
+
+/* Brands Hero with Video */
+.brands-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0057FF 0%, #4285f4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.brands-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.brands-hero .hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.brands-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.brands-hero .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+}
+
+/* Value Proposition */
+.value-prop {
+    padding: 100px 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.value-content h2 {
+    font-size: 2.8rem;
+    color: #0A0A0A;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.value-content p {
+    font-size: 1.3rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Campaign Process */
+.campaign-process {
+    padding: 100px 0;
+    background: white;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.process-step {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.step-number {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #0057FF;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.process-step h3 {
+    color: #0A0A0A;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.process-step p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Birdseye Technology */
+.birdseye-tech {
+    padding: 100px 0;
+    background: #0A0A0A;
+    color: white;
+}
+
+.birdseye-tech .section-title {
+    color: white;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-item h3 {
+    color: #FFDA1F;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.tech-item p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Core Capabilities */
+.core-capabilities {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.capability-card {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.capability-card:hover {
+    transform: translateY(-5px);
+}
+
+.capability-card h3 {
+    color: #0057FF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.capability-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 100px 0;
+    background: white;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonial-item {
+    background: #f8f9fa;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.testimonial-content {
+    margin-bottom: 30px;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.testimonial-content p::before {
+    content: '"';
+    font-size: 3rem;
+    color: #0057FF;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+
+.testimonial-author strong {
+    color: #0A0A0A;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.testimonial-author span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #FFDA1F 0%, #ffd000 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0057FF 0%, #4285f4 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .brands-hero .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .brands-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .value-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .value-content p {
+        font-size: 1.1rem;
+    }
+
+    .process-grid,
+    .tech-grid,
+    .testimonials-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-hero {
+        height: 80vh;
+        min-height: 500px;
+    }
+
+    .brands-hero .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .brands-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .value-content h2 {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
