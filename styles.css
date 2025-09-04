@@ -315,11 +315,11 @@ body {
 }
 
 .image-placeholder {
-    background: #e1e5e9;
-    border: 2px dashed #ccc;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px dashed #0057FF;
     padding: 80px 40px;
     border-radius: 15px;
-    color: #999;
+    color: #0057FF;
     font-style: italic;
     text-align: center;
     width: 100%;
@@ -327,6 +327,48 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder::before {
+    content: "📷";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.image-placeholder:hover {
+    background: linear-gradient(135deg, #f1f3f4 0%, #dee2e6 100%);
+    border-color: #003d99;
+    color: #003d99;
+}
+
+/* Icon placeholders in feature sections */
+.capability-icon .icon-placeholder,
+.feature-icon,
+.benefit-icon,
+.tracking-icon {
+    background: rgba(0, 87, 255, 0.1);
+    color: #0057FF;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 87, 255, 0.2);
 }
 
 /* Why SEEN Section */
@@ -523,6 +565,68 @@ body {
     flex-wrap: wrap;
 }
 
+/* CBT Statistics Section */
+.cbt-stats {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.stats-content {
+    text-align: center;
+}
+
+.stats-header h2 {
+    font-size: 2.5rem;
+    color: #0A0A0A;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.stats-source {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 60px;
+    font-style: italic;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #0057FF;
+    display: block;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.stat-text {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
 /* Driver Program Section */
 .driver-program {
     padding: 100px 0;
@@ -685,6 +789,15 @@ body {
         font-size: 1.1rem;
     }
 
+    .stats-header h2 {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+
     .footer-content {
         flex-direction: column;
         gap: 20px;
@@ -731,6 +844,23 @@ body {
 
     .final-cta .cta-content h2 {
         font-size: 2rem;
+    }
+
+    .stats-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .stat-card {
+        padding: 30px 20px;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
     }
 
     .capability-item {
