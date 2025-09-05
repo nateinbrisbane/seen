@@ -32,69 +32,83 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
-.navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    position: fixed;
+/* Hero Fullscreen Section */
+.hero-fullscreen {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0057FF 0%, #2563eb 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+}
+
+/* Navigation Overlay */
+.navbar-overlay {
+    position: absolute;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    padding: 20px 0;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
 }
 
 .nav-logo h1 {
-    color: #0057FF;
+    color: white;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 28px;
     font-family: 'Satoshi', sans-serif;
     letter-spacing: -0.02em;
+    margin: 0;
 }
 
 .nav-menu {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    align-items: center;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #4A4A4A;
+    color: white;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    position: relative;
     font-family: 'Satoshi', sans-serif;
 }
 
 .nav-link:hover {
-    color: #0057FF;
+    opacity: 0.8;
 }
 
-.nav-link.active {
-    color: #0057FF;
+.nav-button {
+    background: #FFDA1F;
+    color: #0A0A0A;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
     font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    font-family: 'Satoshi', sans-serif;
 }
 
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #0057FF;
-    border-radius: 1px;
+.nav-button:hover {
+    background: #f5ce00;
+    transform: translateY(-1px);
 }
 
 .nav-toggle {
@@ -106,68 +120,127 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background: #0A0A0A;
+    background: white;
     margin: 3px 0;
     transition: 0.3s;
 }
 
-/* Hero Section */
-.hero {
+/* Hero Main Content */
+.hero-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 60px;
     position: relative;
-    color: white;
-    padding: 150px 0 100px;
-    text-align: center;
-    overflow: hidden;
+    z-index: 10;
 }
 
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #0057FF 0%, #4285f4 100%);
-    z-index: 1;
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-.hero-image-placeholder {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px dashed rgba(255, 255, 255, 0.3);
-    padding: 60px 40px;
-    border-radius: 15px;
-    color: rgba(255, 255, 255, 0.8);
-    font-style: italic;
-    font-size: 1.1rem;
-    z-index: 2;
-}
-
-.hero .container {
-    position: relative;
-    z-index: 3;
+.hero-text {
+    max-width: 600px;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
     line-height: 1.1;
     font-family: 'Satoshi', sans-serif;
     letter-spacing: -0.02em;
+    color: white;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.9;
+    margin-bottom: 48px;
+    opacity: 0.95;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.6;
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-car {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.car-image-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    padding: 100px 60px;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.car-image-placeholder::before {
+    content: "🚗";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;
+    opacity: 0.4;
+}
+
+/* City Background */
+.city-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    z-index: 5;
+}
+
+.city-placeholder {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    border-top: 2px dashed rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.city-placeholder::before {
+    content: "🏙️";
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
 }
 
 .cta-button {
@@ -805,17 +878,23 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 0;
         flex-direction: column;
-        background-color: white;
+        background: linear-gradient(135deg, #0057FF 0%, #2563eb 100%);
         width: 100%;
+        height: 100vh;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 20px 0;
+        padding: 100px 20px 20px;
+        justify-content: flex-start;
+        gap: 30px;
     }
 
     .nav-menu.active {
@@ -824,21 +903,40 @@ body {
 
     .nav-toggle {
         display: flex;
+        z-index: 1001;
     }
 
-    .hero-image-placeholder {
-        position: static;
-        transform: none;
-        margin-top: 40px;
-        padding: 40px 20px;
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .hero-text {
+        text-align: center;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .hero-subtitle {
         font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-image-placeholder {
+        padding: 60px 30px;
+        min-height: 250px;
+    }
+
+    .city-background {
+        height: 150px;
     }
 
     .section-title {
@@ -896,12 +994,35 @@ body {
         padding: 0 15px;
     }
 
-    .hero {
-        padding: 120px 0 80px;
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .hero-layout {
+        padding: 0 15px;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+    }
+
+    .cta-button {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+
+    .car-image-placeholder {
+        padding: 40px 20px;
+        min-height: 200px;
+        font-size: 1rem;
     }
 
     .section-title {

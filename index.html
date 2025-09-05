@@ -12,38 +12,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h1>SEEN</h1>
+    <!-- Hero Section with Navigation -->
+    <section class="hero-fullscreen">
+        <!-- Navigation -->
+        <nav class="navbar-overlay">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>SEEN</h1>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="for-drivers.html" class="nav-button">FOR DRIVERS</a>
+                    <a href="for-brands.html" class="nav-link">FOR BRANDS & AGENCIES</a>
+                    <a href="campaign-insight.html" class="nav-link">CAMPAIGN INSIGHT</a>
+                    <a href="contact.html" class="nav-link">CONTACTS</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="for-drivers.html" class="nav-link">For Drivers</a>
-                <a href="for-brands.html" class="nav-link">For Brands & Agencies</a>
-                <a href="campaign-insight.html" class="nav-link">Campaign Insight</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-image-placeholder">Vehicle with branded wrap - promotional hero image (~1920x400px)</div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Put Your Brand in Motion with SEEN</h1>
-                <p class="hero-subtitle">Scalable vehicle-based ads on real city streets. Built for brands, powered by drivers. Seen by everyone.</p>
-                <a href="contact.html" class="cta-button primary">START ADVERTISING</a>
+        <!-- Hero Content -->
+        <div class="hero-main">
+            <div class="container">
+                <div class="hero-layout">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Put Your Brand in Motion with SEEN</h1>
+                        <p class="hero-subtitle">Scalable vehicle-based ads on real city streets. Built for brands, powered by drivers. Seen by everyone.</p>
+                        <div class="hero-buttons">
+                            <a href="for-brands.html" class="cta-button primary">Start Advertising</a>
+                            <a href="for-drivers.html" class="cta-button primary">Drive With SEEN</a>
+                        </div>
+                    </div>
+                    <div class="hero-car">
+                        <div class="car-image-placeholder">Blue car with SEEN branding - hero vehicle image</div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- City Background -->
+        <div class="city-background">
+            <div class="city-placeholder">Urban cityscape background</div>
         </div>
     </section>
 
